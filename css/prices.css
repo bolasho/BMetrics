@@ -1,0 +1,12 @@
+table {
+    table-layout: fixed;
+    word-wrap: break-word;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+.text-sm {
+    font-size: 12px;
+}
+.price {
+    font-size: 3em;
+}

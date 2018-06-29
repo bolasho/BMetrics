@@ -1,1 +1,15 @@
+//Rewrite to www
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^bmetrics.ie[nc]
+RewriteRule ^(.*)$ http://www.bmetrics.ie/$1 [r=301,nc]
+
+//301 Redirect Old File
+Redirect 301 bmetrics.ie/cgi-sys/defaultwebpage.cgi bmetrics.ie/index.html
+
+//301 Redirect Entire Directory
+RedirectMatch 301 bmetrics.ie/cgi-sys/defaultwebpage.cgi(.*) bmetrics.ie/index.html/$1
+
+//Change default directory page
 DirectoryIndex index.html
+ 
